@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="indexseller.master.cs" Inherits="AuctionManagementSystem.indexseller" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+	body{
+		font-family:'Agency FB';
+		overflow: scroll;
+		background: gold;
+	}
+     div{
+		float: left;
+	}
+	.head{
+		width: 100%;
+	}
+	.nav{
+		border-radius: 10px;
+	}
+	.nav ul li{
+		float: left;
+		padding: 10px;
+		list-style: none;
+		margin-left: 10px;
+		font-family: Gadugi;
+	}
+	.nav ul li:hover{
+		background: teal;
+		transition: .4s;
+		color: #000;
+		border-bottom: 2px solid silver;
+		color: white;
+	}
+	.nav input[type='button']{
+		padding: 10px;
+        margin-left:10px;
+		background: #008080;
+		color: white;
+        font-family:Corbel;
+        font-size:13px;
+        font-weight:bold;
+		border-radius: 10px;
+		
+	}
+	.nav input[type='button']:hover{
+		background:#ff6a00;
+
+	}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	</style>
+</head>
+<body>
+    <div class="logo">
+		<img src="logo.png" style="">
+	</div>
+    <div><center><h2 style="font-family: 'An Unfortunate Event';" >BIDDERCOM</h2><img src="person-icon.png" />
+        <br /><asp:Label ID="Label1" runat="server" Text="Label" Font-Bold="True" Font-Size="X-Large"></asp:Label></center>
+        
+        <br />
+		<div class="nav">
+			<ul>
+			<a href="sellerdesk.aspx"><li>HOME</li></a>
+			<a href="additem.aspx"><li>ADD ITEM</li></a>
+			<a href="solditemlist.aspx"><li>SOLD ITEM LIST</li></a>
+            <a href="auctionlist.aspx"><li>AUCTION LIST</li></a>
+			<a href="profile2.aspx"><li>PROFILE</li></a>
+            <a href="itemlist.aspx"><li>ITEM LIST</li></a>
+			<a href="contactusseller.aspx"><li>CONTACT US</li></a>
+            <a href='logout.aspx'><input type='button' name='' value='LOGOUT'></a>
+		</ul>	
+		</div>
+	</div>
+    <br /><br /><br />
+    <form id="form1" runat="server" class="form">
+    <div>
+        <table>
+            <tr>
+                <td class="auto-style1">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+    <div style="width: 100%;"><center><h3>Copyrights 2019-2021 all rights reserved by bidder.com</h3></center></div>
+     <script type="text/javascript">
+         function preventBack() { window.history.forward(); }
+         setTimeout("preventBack()", 0);
+         window.onunload = function () { null };
+    </script>
+</body>
+</html>
